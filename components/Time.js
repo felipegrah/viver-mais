@@ -23,7 +23,7 @@ export default function Time() {
             alt="Person"
           />
           <div className="flex flex-col items-center">
-            <p className="text-lg font-bold">Dra. Amanda de Sousa Grah</p>
+            <p className="text-lg font-bold">Amanda de Sousa Grah</p>
             <p className="text-sm text-gray-800 my-3">
               Fisioterapeura (CREFITO -10 240620-F)
             </p>
@@ -57,7 +57,7 @@ export default function Time() {
             alt="Person"
           />
           <div className="flex flex-col items-center">
-            <p className="text-lg font-bold">Dra. Sabrina Pickler</p>
+            <p className="text-lg font-bold">Sabrina Pickler</p>
             <p className="text-sm text-gray-800 my-3">
               Fisioterapeura (CREFITO -10 309203-F)
             </p>

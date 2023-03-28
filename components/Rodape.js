@@ -23,7 +23,7 @@ export default function Rodape() {
             <span className="font-bold">Endereço: </span>R. Ialene Schutz Horstmann, 233 - Aririu, Palhoça - SC, 88135-221
             </p>
             <p className="mt-4 text-sm text-gray-800">
-              <span className="font-bold">Telefone:</span> (48) 98826-8600
+              <span className="font-bold">Telefone:</span> <a href="tel:98826-8600">(48) 98826-8600</a>
             </p>
           </div>
         </div>
