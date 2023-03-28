@@ -37,6 +37,7 @@ export default function Time() {
               <li>Pilates completo (Edcel Rosa)</li>
               <li>Neopilates (Amanda Braz)</li>
               <li>Aprimoramento em Pilates (Grupo Voll Pilates)</li>
+              <li>Pilates Para Gestantes e Baby Pilates (Grupo Voll Pilates)</li>
               <li>Pilates kids (Grupo Voll Pilates)</li>
               <li>Treinamento Funcional (Equipe Ivana Henn)</li>
               <li>Workshop de Flexibilidade e Força (Marcella Contursi)</li>
