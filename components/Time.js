@@ -18,14 +18,14 @@ export default function Time() {
       <div className="grid gap-10 mx-auto lg:max-w-screen-lg sm:grid-cols-1 lg:grid-cols-2">
         <div className="flex flex-col items-center">
           <img
-            className="object-cover w-40 h-40 mb-2 rounded-full shadow"
+            className="object-cover object-top w-40 h-40 mb-2 rounded-full shadow"
             src="/images/fisios/amanda2.jpeg"
             alt="Person"
           />
           <div className="flex flex-col items-center">
             <p className="text-lg font-bold">Amanda de Sousa Grah</p>
             <p className="text-sm text-gray-800 my-3">
-              Fisioterapeura (CREFITO -10 240620-F)
+              Fisioterapeuta (CREFITO -10 240620-F)
             </p>
             <p className="text-base text-justify">
               Responsável técnico do Espaço Viver Mais Pilates, é graduada pela
@@ -33,7 +33,7 @@ export default function Time() {
               Saúde com ênfase em Administração Estratégica. Além disso, têm
               cursos em:
             </p>
-            <ul className="list-disc text-sm px-4 mt-3">
+            <ul className="list-disc text-sm px-4 mt-3 flex flex-col w-full">
               <li>Pilates completo (Edcel Rosa)</li>
               <li>Neopilates (Amanda Braz)</li>
               <li>Aprimoramento em Pilates (Grupo Voll Pilates)</li>
@@ -53,28 +53,78 @@ export default function Time() {
         {/** DIVISAO FISIOS */}
         <div className="flex flex-col items-center">
           <img
-            className="object-cover w-40 h-40 mb-2 rounded-full shadow"
+            className="object-cover object-top w-40 h-40 mb-2 rounded-full shadow"
             src="/images/fisios/sabrina1.jpeg"
             alt="Person"
           />
           <div className="flex flex-col items-center">
             <p className="text-lg font-bold">Sabrina Pickler</p>
             <p className="text-sm text-gray-800 my-3">
-              Fisioterapeura (CREFITO -10 309203-F)
+              Fisioterapeuta (CREFITO -10 309203-F)
             </p>
             <p className="text-base text-justify">
               Graduada pelo Instituto de Ensino Superior da Grande Florianópolis
               (IESGF) e pós graduada em Fisioterapia Ortopédica e Traumatológica
               pela faculdade Estácio. Além disso, têm cursos em:
             </p>
-            <ul className="list-disc text-sm px-4 mt-3">
-              <li>Pilates completo (Edcel Rosa)</li>
+            <ul className="list-disc text-sm px-4 mt-3 flex flex-col w-full">
+              <li>Pilates completo - Edcel Rosa</li>
               <li>Pilates para gestante - Instituto Cefisa de Ensino em Saúde</li>
               <li>Pilates para coluna lombar - Edcel Rosa </li>
               <li>Pilates terapêutico - Edcel Rosa</li>
               <li>Ventosaterapia - Instituto RS educação e saúde. </li>
               <li>Bandagem Elástica Funcional - Instituto RS educação e saúde.</li>
               <li>Liberação Miofacial - Instituto RS educação e saúde.</li>
+            </ul>
+          </div>
+        </div>
+        {/** DIVISAO FISIOS */}
+        <div className="flex flex-col items-center">
+          <img
+            className="object-cover object-top w-40 h-40 mb-2 rounded-full shadow"
+            src="/images/fisios/DudaFisio.jpeg"
+            alt="Person"
+          />
+          <div className="flex flex-col items-center">
+            <p className="text-lg font-bold">Eduarda de Souza</p>
+            <p className="text-sm text-gray-800 my-3">
+            Fisioterapeuta (CREFITO -10 370659-F)
+            </p>
+            <p className="text-base text-justify">
+            Graduada pela Universidade do Sul de Santa Catarina (UNISUL). Além disso, têm cursos em:
+            </p>
+            <ul className="list-disc text-sm px-4 mt-3 flex flex-col w-full">
+              <li>Pilates completo - Edcel Rosa</li>
+              <li>Avançado em patologias - Keyner Luiz</li>
+              <li>Pilates para idosos - Grupo Voll Pilates</li>
+              <li>Pilates para gestantes - Grupo Voll Pilates</li>
+            </ul>
+          </div>
+        </div>
+        {/** DIVISAO FISIOS */}
+        <div className="flex flex-col items-center">
+          <img
+            className="object-cover object-top w-40 h-40 mb-2 rounded-full shadow"
+            src="/images/fisios/thaisfisio.jpeg"
+            alt="Person"
+          />
+          <div className="flex flex-col items-center">
+            <p className="text-lg font-bold">Thaís Silveira de Oliveira</p>
+            <p className="text-sm text-gray-800 my-3">
+              Fisioterapeuta (CREFITO -10 320899-F)
+            </p>
+            <p className="text-base text-justify">
+            Graduada pelo Instituto de Ensino Superior da Grande Florianópolis (IESGF) e pós graduada em Fisioterapia Cardiorrespiratória pela faculdade Anhanguera. Além disso, têm cursos em:
+            </p>
+            <ul className="list-disc text-sm px-4 mt-3 flex flex-col w-full">
+              <li>Pilates completo - Edcel Rosa</li>
+              <li>Workshop diástase - Érika Batista </li>
+              <li>Flexibilidade no pilates - Marcela contursi Five</li>
+              <li>Ventosaterapia - Sete de Setembro </li>
+              <li>Massagem modeladora - Vitta Derm </li>
+              <li>Massagem relaxante - Sete de Setembro </li>
+              <li>Bambuterapia - Sete de Setembro </li>
+              <li>Drenagem linfática - Sete de Setembro </li>
             </ul>
           </div>
         </div>
