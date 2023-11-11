@@ -50,7 +50,7 @@ export default function Time() {
             </ul>
           </div>
         </div>
-        {/** DIVISAO FISIOS */}
+        {/** DIVISAO FISIOS 
         <div className="flex flex-col items-center">
           <img
             className="object-cover object-top w-40 h-40 mb-2 rounded-full shadow"
@@ -78,6 +78,7 @@ export default function Time() {
             </ul>
           </div>
         </div>
+        */}
         {/** DIVISAO FISIOS */}
         <div className="flex flex-col items-center">
           <img
@@ -101,7 +102,7 @@ export default function Time() {
             </ul>
           </div>
         </div>
-        {/** DIVISAO FISIOS */}
+        {/** DIVISAO FISIOS 
         <div className="flex flex-col items-center">
           <img
             className="object-cover object-top w-40 h-40 mb-2 rounded-full shadow"
@@ -128,6 +129,7 @@ export default function Time() {
             </ul>
           </div>
         </div>
+        */}
       </div>
     </div>
   );
