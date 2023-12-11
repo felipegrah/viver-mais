@@ -8,6 +8,7 @@ import WhatsappContato from '../components/WhatsappContato'
 import Contato from '../components/Contato'
 import Rodape from '../components/Rodape'
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from '@vercel/analytics/react';
 
 const navigation = [
   { name: 'Home', href: '#' },
@@ -139,6 +140,7 @@ export default function Home() {
       <WhatsappContato />
       </div>
       <SpeedInsights />
+      <Analytics />
     </>
   );
 }
