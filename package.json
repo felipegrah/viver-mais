@@ -28,5 +28,8 @@
     "react-dom": "18.2.0",
     "react-input-mask": "^2.0.4",
     "tailwindcss": "^2.0.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
   }
 }

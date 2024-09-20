@@ -15,7 +15,7 @@ export default function Time() {
           prevenção e tratamento de patologias.
         </p>
       </div>
-      <div className="grid gap-10 mx-auto lg:max-w-screen-lg sm:grid-cols-1 lg:grid-cols-2">
+      <div className="grid gap-10 mx-auto lg:max-w-screen-lg grid-cols-1">
         <div className="flex flex-col items-center">
           <img
             className="object-cover object-top w-40 h-40 mb-2 rounded-full shadow"
@@ -79,7 +79,7 @@ export default function Time() {
           </div>
         </div>
         */}
-        {/** DIVISAO FISIOS */}
+        {/** DIVISAO FISIOS 
         <div className="flex flex-col items-center">
           <img
             className="object-cover object-top w-40 h-40 mb-2 rounded-full shadow"
@@ -102,6 +102,7 @@ export default function Time() {
             </ul>
           </div>
         </div>
+        */}
         {/** DIVISAO FISIOS 
         <div className="flex flex-col items-center">
           <img
