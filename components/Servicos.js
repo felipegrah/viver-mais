@@ -34,12 +34,6 @@ export default function Servicos() {
               </p>
             </div>
             <div className="max-w-md">
-              <h6 className="mb-6 text-3xl font-extrabold leading-none uppercas text-gray-900">Pilates kids</h6>
-              <p className="text-sm text-gray-700">
-                Além de ser uma atividade leve e divertida para as crianças ele trabalha a concentração, postura, coordenação motora, entre outros.
-              </p>
-            </div>
-            <div className="max-w-md">
               <h6 className="mb-6 text-3xl font-extrabold leading-none uppercas text-gray-900">Pilates Solo</h6>
               <p className="text-sm text-gray-700">
                 O Pilates solo, como o próprio nome já diz é praticado no chão sobre um tatame ou colchonete utilizando o peso do próprio corpo. Esse método pode ter o auxilio de alguns acessórios como bolas, faixas elásticas, halteres, rolos de espuma.

@@ -11,16 +11,16 @@ export default function Time() {
           Nosso Time
         </h4>
         <p className="text-base text-gray-700 md:text-lg">
-          Nosso time é formado por fisioterapeutas, para alinhar o pilates com a
-          prevenção e tratamento de patologias.
+          Aqui, você é cuidado por fisioterapeutas que utilizam o Pilates como ferramenta para fortalecer o corpo, aliviar dores e promover bem-estar no dia a dia.
         </p>
       </div>
-      <div className="grid gap-10 mx-auto lg:max-w-screen-lg grid-cols-1">
+      <div className="grid gap-10 mx-auto lg:max-w-screen-lg grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+        {/* Amanda */}
         <div className="flex flex-col items-center">
           <img
             className="object-cover object-top w-40 h-40 mb-2 rounded-full shadow"
             src="/images/fisios/amanda2.jpeg"
-            alt="Person"
+            alt="Amanda de Sousa Grah"
           />
           <div className="flex flex-col items-center">
             <p className="text-lg font-bold">Amanda de Sousa Grah</p>
@@ -50,87 +50,79 @@ export default function Time() {
             </ul>
           </div>
         </div>
-        {/** DIVISAO FISIOS 
+        {/* Denise Coelho */}
         <div className="flex flex-col items-center">
           <img
             className="object-cover object-top w-40 h-40 mb-2 rounded-full shadow"
-            src="/images/fisios/sabrina1.jpeg"
-            alt="Person"
+            src="/images/fisios/denise.jpeg"
+            alt="Denise Coelho"
           />
           <div className="flex flex-col items-center">
-            <p className="text-lg font-bold">Sabrina Pickler</p>
+            <p className="text-lg font-bold">Denise Coelho</p>
             <p className="text-sm text-gray-800 my-3">
-              Fisioterapeuta (CREFITO -10 309203-F)
+              Fisioterapeuta (CREFITO -10 302537-F)
             </p>
             <p className="text-base text-justify">
-              Graduada pelo Instituto de Ensino Superior da Grande Florianópolis
-              (IESGF) e pós graduada em Fisioterapia Ortopédica e Traumatológica
-              pela faculdade Estácio. Além disso, têm cursos em:
+              Graduada pela Universidade do Sul de Santa Catarina (UNISUL). Além disso, têm cursos em:
             </p>
             <ul className="list-disc text-sm px-4 mt-3 flex flex-col w-full">
-              <li>Pilates completo - Edcel Rosa</li>
-              <li>Pilates para gestante - Instituto Cefisa de Ensino em Saúde</li>
-              <li>Pilates para coluna lombar - Edcel Rosa </li>
-              <li>Pilates terapêutico - Edcel Rosa</li>
-              <li>Ventosaterapia - Instituto RS educação e saúde. </li>
-              <li>Bandagem Elástica Funcional - Instituto RS educação e saúde.</li>
-              <li>Liberação Miofacial - Instituto RS educação e saúde.</li>
+              <li>Pilates completo</li>
+              <li>Bandagem Neuromuscular – FisioTaping</li>
+              <li>Curso de Ventosaterapia</li> 
+              <li>Master Class Tornozelo, Pé e Palmilhas</li>
+              <li>Estabilização Segmentar Lombar</li>
+              <li>Instabilidade do Joelho</li>
+              <li>Impacto Femuroacetabular do Quadril</li>
             </ul>
           </div>
         </div>
-        */}
-        {/** DIVISAO FISIOS 
+        {/* Jhulian Covre Rodrigues */}
         <div className="flex flex-col items-center">
           <img
             className="object-cover object-top w-40 h-40 mb-2 rounded-full shadow"
-            src="/images/fisios/DudaFisio.jpeg"
-            alt="Person"
+            src="/images/fisios/jhulian.jpeg"
+            alt="Jhulian Covre Rodrigues"
           />
           <div className="flex flex-col items-center">
-            <p className="text-lg font-bold">Eduarda de Souza</p>
+            <p className="text-lg font-bold">Jhulian Covre Rodrigues</p>
             <p className="text-sm text-gray-800 my-3">
-            Fisioterapeuta (CREFITO -10 370659-F)
+              Fisioterapeuta (CREFITO-10 370180-F)
             </p>
             <p className="text-base text-justify">
-            Graduada pela Universidade do Sul de Santa Catarina (UNISUL). Além disso, têm cursos em:
+              Graduada pela Universidade do Sul de Santa Catarina (UNISUL), pós-graduada em Fisioterapia Dermatofuncional e Cosmetologia Avançada e pós- graduanda em Fisioterapia Gerontológica e Geriátrica e em Fisiologia do exercício e treinamento desportivo. Além disso, têm cursos em:
             </p>
             <ul className="list-disc text-sm px-4 mt-3 flex flex-col w-full">
-              <li>Pilates completo - Edcel Rosa</li>
-              <li>Avançado em patologias - Keyner Luiz</li>
-              <li>Pilates para idosos - Grupo Voll Pilates</li>
-              <li>Pilates para gestantes - Grupo Voll Pilates</li>
+              <li>Pilates completo</li>
+              <li>Socorrista APH</li>
+              <li>Fisioterapia no Pós-Parto</li>
+              <li>Exercícios rotacionais</li>
+              <li>Bases do treinamento físico, periodização e prescrição</li>
             </ul>
           </div>
         </div>
-        */}
-        {/** DIVISAO FISIOS 
+        {/* Thaís */}
         <div className="flex flex-col items-center">
           <img
             className="object-cover object-top w-40 h-40 mb-2 rounded-full shadow"
-            src="/images/fisios/thaisfisio.jpeg"
-            alt="Person"
+            src="/images/fisios/tamiris.jpeg"
+            alt="Tamiris Patrícia dos Santos "
           />
           <div className="flex flex-col items-center">
-            <p className="text-lg font-bold">Thaís Silveira de Oliveira</p>
+            <p className="text-lg font-bold">Tamiris Patrícia dos Santos</p>
             <p className="text-sm text-gray-800 my-3">
-              Fisioterapeuta (CREFITO -10 320899-F)
+              Fisioterapeuta (CREFITO-10 448295-F)
             </p>
             <p className="text-base text-justify">
-            Graduada pelo Instituto de Ensino Superior da Grande Florianópolis (IESGF) e pós graduada em Fisioterapia Cardiorrespiratória pela faculdade Anhanguera. Além disso, têm cursos em:
+              Graduada pela Universidade do Sul de Santa Catarina (UNISUL).
             </p>
             <ul className="list-disc text-sm px-4 mt-3 flex flex-col w-full">
-              <li>Pilates completo - Edcel Rosa</li>
-              <li>Workshop diástase - Érika Batista </li>
-              <li>Flexibilidade no pilates - Marcela contursi Five</li>
-              <li>Ventosaterapia - Sete de Setembro </li>
-              <li>Massagem modeladora - Vitta Derm </li>
-              <li>Massagem relaxante - Sete de Setembro </li>
-              <li>Bambuterapia - Sete de Setembro </li>
-              <li>Drenagem linfática - Sete de Setembro </li>
+              <li>Curso de Pilates Completo – Edcel Rosa</li>
+              <li>Extensão em Comunicação em Saúde – Universidade do Sul de Santa Catarina</li>
+              <li>Projeto de Extensão Motiva Down – Universidade do Sul de Santa Catarina</li>
+              <li>Extensão em Ventosaterapia – Universidade do Sul de Santa Catarina</li>
             </ul>
           </div>
         </div>
-        */}
       </div>
     </div>
   );
