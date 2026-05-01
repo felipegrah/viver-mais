@@ -14,7 +14,7 @@ export default function Time() {
           Aqui, você é cuidado por fisioterapeutas que utilizam o Pilates como ferramenta para fortalecer o corpo, aliviar dores e promover bem-estar no dia a dia.
         </p>
       </div>
-      <div className="grid gap-10 mx-auto lg:max-w-screen-lg grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-10 mx-auto lg:max-w-screen-lg grid-cols-1 sm:grid-cols-2 lg:grid-cols-2">
         {/* Amanda */}
         <div className="flex flex-col items-center">
           <img
