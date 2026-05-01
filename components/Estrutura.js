@@ -21,19 +21,19 @@ export default function Estrutura() {
             <div className="flex flex-col items-end px-3">
               <img
                 className="object-cover mb-6 rounded shadow-lg h-28 sm:h-48 xl:h-56 w-28 sm:w-48 xl:w-56"
-                src="/images/interior/recepcao.jpeg"
+                src="/images/interior/novo/1.jpeg"
                 alt=""
               />
               <img
                 className="object-cover w-20 h-20 rounded shadow-lg sm:h-32 xl:h-40 sm:w-32 xl:w-40"
-                src="/images/interior/angulo3.jpeg"
+                src="/images/interior/novo/2.jpeg"
                 alt=""
               />
             </div>
             <div className="px-3">
               <img
                 className="object-cover w-40 h-40 rounded shadow-lg sm:h-64 xl:h-80 sm:w-64 xl:w-80"
-                src="/images/interior/interior_4.jpg"
+                src="/images/interior/novo/3.jpeg"
                 alt=""
               />
             </div>
