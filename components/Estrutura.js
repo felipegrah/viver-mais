@@ -1,45 +1,66 @@
-import React from 'react'
+import Image from 'next/image'
+import { galeria } from '../data/site'
+import Icone from './ui/Icones'
+import Reveal from './ui/Reveal'
+
+const itens = [
+  'Amplo salão para Pilates e Neopilates',
+  'Recepção aconchegante para a sua espera',
+  'Aparelhos completos e higienizados a cada aula',
+  'Estacionamento gratuito no local',
+]
 
 export default function Estrutura() {
   return (
-    <div>
-      <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-        <div className="grid gap-10 lg:grid-cols-2">
-          <div className="flex flex-col justify-center md:pr-8 xl:pr-0 lg:max-w-lg">
-          <div className="mx-auto mb-20 lg:max-w-xl sm:text-center">
-          <h4 className="tracking-tight font-extrabold text-green-600 sm:text-5xl md:text-6xl px-3 py-px mb-4 text-xs uppercase">
-            Estrutura
-          </h4>
+    <section id="estrutura" className="scroll-mt-24 bg-white py-20 lg:py-28">
+      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+        <div className="grid items-end gap-10 lg:grid-cols-2 lg:gap-20">
+          <Reveal>
+            <span className="inline-flex items-center gap-2 rounded-full bg-brand-50 px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-700">
+              <span className="h-1.5 w-1.5 rounded-full bg-lima-500" />
+              Estrutura
+            </span>
+            <h2 className="mt-5 font-display text-[2rem] font-semibold leading-[1.1] tracking-tight text-tinta sm:text-[2.75rem]">
+              Um espaço pensado para você treinar tranquilo
+            </h2>
+            <p className="mt-5 max-w-xl text-[17px] leading-relaxed text-tinta-suave">
+              Do estacionamento à sala de aula, cada detalhe foi pensado para que a sua hora de
+              cuidar do corpo seja também a parte mais leve do dia.
+            </p>
+          </Reveal>
+
+          <Reveal delay={120}>
+            <ul className="grid gap-4 sm:grid-cols-2 lg:gap-x-8">
+              {itens.map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-lima-100 text-lima-700">
+                    <Icone nome="check" className="h-3.5 w-3.5" />
+                  </span>
+                  <span className="text-[16px] leading-snug text-tinta">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </Reveal>
         </div>
-            <div className="max-w-xl mb-6">
-              <h3 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
-                Temos estacionamento, recepção aconchegante e um amplo espaço para realização do método Pilates e Neopilates.
-              </h3>
-            </div>
-          </div>
-          <div className="flex items-center justify-center -mx-4 lg:pl-8">
-            <div className="flex flex-col items-end px-3">
-              <img
-                className="object-cover mb-6 rounded shadow-lg h-28 sm:h-48 xl:h-56 w-28 sm:w-48 xl:w-56"
-                src="/images/interior/novo/1.jpeg"
-                alt=""
+
+        <div className="mt-14 grid gap-4 sm:grid-cols-3 sm:gap-6">
+          {galeria.map((f, i) => (
+            <Reveal
+              key={f.src}
+              delay={i * 110}
+              className="group relative aspect-[3/4] overflow-hidden rounded-[1.5rem] bg-areia-100 shadow-suave"
+            >
+              <Image
+                src={f.src}
+                alt={f.alt}
+                fill
+                sizes="(max-width: 640px) 100vw, 31vw"
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              <img
-                className="object-cover w-20 h-20 rounded shadow-lg sm:h-32 xl:h-40 sm:w-32 xl:w-40"
-                src="/images/interior/novo/2.jpeg"
-                alt=""
-              />
-            </div>
-            <div className="px-3">
-              <img
-                className="object-cover w-40 h-40 rounded shadow-lg sm:h-64 xl:h-80 sm:w-64 xl:w-80"
-                src="/images/interior/novo/3.jpeg"
-                alt=""
-              />
-            </div>
-          </div>
+            </Reveal>
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   )
 }

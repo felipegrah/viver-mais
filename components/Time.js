@@ -1,129 +1,93 @@
-import React from "react";
+import Image from 'next/image'
+import { useState } from 'react'
+import { equipe, equipeIntro } from '../data/site'
+import Icone from './ui/Icones'
+import Reveal from './ui/Reveal'
+import TituloSecao from './ui/TituloSecao'
 
 export default function Time() {
   return (
-    <div
-      className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 mb-10"
-      id="equipe"
+    <section id="equipe" className="scroll-mt-24 bg-areia-50 py-20 lg:py-28">
+      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+        <TituloSecao
+          etiqueta="Nosso time"
+          titulo="Fisioterapeutas ao seu lado em cada exercício"
+          texto={equipeIntro}
+        />
+
+        <div className="mt-14 grid gap-8 md:grid-cols-2">
+          {equipe.map((p, i) => (
+            <CartaoProfissional key={p.nome} pessoa={p} delay={i * 100} />
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function CartaoProfissional({ pessoa, delay }) {
+  const [aberto, setAberto] = useState(false)
+
+  return (
+    <Reveal
+      delay={delay}
+      className="overflow-hidden rounded-[1.75rem] border border-areia-200 bg-white shadow-suave"
     >
-      <div className="mx-auto mb-10 lg:max-w-xl sm:text-center">
-        <h4 className="tracking-tight font-extrabold text-green-600 sm:text-5xl md:text-6xl px-3 py-px mb-4 text-xs uppercase">
-          Nosso Time
-        </h4>
-        <p className="text-base text-gray-700 md:text-lg">
-          Aqui, você é cuidado por fisioterapeutas que utilizam o Pilates como ferramenta para fortalecer o corpo, aliviar dores e promover bem-estar no dia a dia.
-        </p>
-      </div>
-      <div className="grid gap-10 mx-auto lg:max-w-screen-lg grid-cols-1 sm:grid-cols-2 lg:grid-cols-2">
-        {/* Amanda */}
-        <div className="flex flex-col items-center">
-          <img
-            className="object-cover object-top w-40 h-40 mb-2 rounded-full shadow"
-            src="/images/fisios/amanda2.jpeg"
-            alt="Amanda de Sousa Grah"
+      <div className="flex flex-col gap-6 p-7 sm:flex-row sm:items-start sm:p-9">
+        <div className="relative h-28 w-28 shrink-0 overflow-hidden rounded-2xl bg-areia-100 ring-4 ring-brand-50 sm:h-32 sm:w-32">
+          <Image
+            src={pessoa.foto}
+            alt={`Foto de ${pessoa.nome}`}
+            fill
+            sizes="128px"
+            className="object-cover object-top"
           />
-          <div className="flex flex-col items-center">
-            <p className="text-lg font-bold">Amanda de Sousa Grah</p>
-            <p className="text-sm text-gray-800 my-3">
-              Fisioterapeuta (CREFITO -10 240620-F)
-            </p>
-            <p className="text-base text-justify">
-              Responsável técnico do Espaço Viver Mais Pilates, é graduada pela
-              Universidade do Sul de Santa Catarina e pós graduanda em Gestão da
-              Saúde com ênfase em Administração Estratégica. Além disso, têm
-              cursos em:
-            </p>
-            <ul className="list-disc text-sm px-4 mt-3 flex flex-col w-full">
-              <li>Pilates completo (Edcel Rosa)</li>
-              <li>Neopilates (Amanda Braz)</li>
-              <li>Aprimoramento em Pilates (Grupo Voll Pilates)</li>
-              <li>Pilates Para Gestantes e Baby Pilates (Grupo Voll Pilates)</li>
-              <li>Pilates kids (Grupo Voll Pilates)</li>
-              <li>Treinamento Funcional (Equipe Ivana Henn)</li>
-              <li>Workshop de Flexibilidade e Força (Marcella Contursi)</li>
-              <li>
-                Avaliação e tratamento das lesões do joelho e quadril (GMK
-                cursos)
-              </li>
-              <li>Ventosaterapia (Instituto Cefisa de Ensino em Saúde)</li>
-              <li>Kinesio Tape (K-Taping International Academy)</li>
-            </ul>
-          </div>
         </div>
-        {/* Denise Coelho */}
-        <div className="flex flex-col items-center">
-          <img
-            className="object-cover object-top w-40 h-40 mb-2 rounded-full shadow"
-            src="/images/fisios/denise.jpeg"
-            alt="Denise Coelho"
-          />
-          <div className="flex flex-col items-center">
-            <p className="text-lg font-bold">Denise Coelho</p>
-            <p className="text-sm text-gray-800 my-3">
-              Fisioterapeuta (CREFITO -10 302537-F)
-            </p>
-            <p className="text-base text-justify">
-              Graduada pela Universidade do Sul de Santa Catarina (UNISUL). Além disso, têm cursos em:
-            </p>
-            <ul className="list-disc text-sm px-4 mt-3 flex flex-col w-full">
-              <li>Pilates completo</li>
-              <li>Bandagem Neuromuscular – FisioTaping</li>
-              <li>Curso de Ventosaterapia</li> 
-              <li>Master Class Tornozelo, Pé e Palmilhas</li>
-              <li>Estabilização Segmentar Lombar</li>
-              <li>Instabilidade do Joelho</li>
-              <li>Impacto Femuroacetabular do Quadril</li>
-            </ul>
-          </div>
-        </div>
-        {/* Jhulian Covre Rodrigues */}
-        <div className="flex flex-col items-center">
-          <img
-            className="object-cover object-top w-40 h-40 mb-2 rounded-full shadow"
-            src="/images/fisios/jhulian.jpeg"
-            alt="Jhulian Covre Rodrigues"
-          />
-          <div className="flex flex-col items-center">
-            <p className="text-lg font-bold">Jhulian Covre Rodrigues</p>
-            <p className="text-sm text-gray-800 my-3">
-              Fisioterapeuta (CREFITO-10 370180-F)
-            </p>
-            <p className="text-base text-justify">
-              Graduada pela Universidade do Sul de Santa Catarina (UNISUL), pós-graduada em Fisioterapia Dermatofuncional e Cosmetologia Avançada e pós- graduanda em Fisioterapia Gerontológica e Geriátrica e em Fisiologia do exercício e treinamento desportivo. Além disso, têm cursos em:
-            </p>
-            <ul className="list-disc text-sm px-4 mt-3 flex flex-col w-full">
-              <li>Pilates completo</li>
-              <li>Socorrista APH</li>
-              <li>Fisioterapia no Pós-Parto</li>
-              <li>Exercícios rotacionais</li>
-              <li>Bases do treinamento físico, periodização e prescrição</li>
-            </ul>
-          </div>
-        </div>
-        {/* Thaís */}
-        <div className="flex flex-col items-center">
-          <img
-            className="object-cover object-top w-40 h-40 mb-2 rounded-full shadow"
-            src="/images/fisios/tamiris.jpeg"
-            alt="Tamiris Patrícia dos Santos "
-          />
-          <div className="flex flex-col items-center">
-            <p className="text-lg font-bold">Tamiris Patrícia dos Santos</p>
-            <p className="text-sm text-gray-800 my-3">
-              Fisioterapeuta (CREFITO-10 448295-F)
-            </p>
-            <p className="text-base text-justify">
-              Graduada pela Universidade do Sul de Santa Catarina (UNISUL).
-            </p>
-            <ul className="list-disc text-sm px-4 mt-3 flex flex-col w-full">
-              <li>Curso de Pilates Completo – Edcel Rosa</li>
-              <li>Extensão em Comunicação em Saúde – Universidade do Sul de Santa Catarina</li>
-              <li>Projeto de Extensão Motiva Down – Universidade do Sul de Santa Catarina</li>
-              <li>Extensão em Ventosaterapia – Universidade do Sul de Santa Catarina</li>
-            </ul>
+
+        <div className="min-w-0 flex-1">
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-lima-100 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-lima-800">
+            {pessoa.cargo}
+          </span>
+          <h3 className="mt-3 font-display text-2xl font-semibold leading-tight text-tinta">
+            {pessoa.nome}
+          </h3>
+          <p className="mt-1.5 flex items-center gap-1.5 text-sm text-tinta-suave">
+            <Icone nome="certificado" className="h-4 w-4 text-brand-500" />
+            {pessoa.crefito}
+          </p>
+          <p className="mt-4 text-[15px] leading-relaxed text-tinta-suave">{pessoa.bio}</p>
+
+          <button
+            type="button"
+            onClick={() => setAberto((v) => !v)}
+            aria-expanded={aberto}
+            className="mt-5 inline-flex items-center gap-2 text-[15px] font-semibold text-brand-700 transition-colors hover:text-brand-900"
+          >
+            {aberto ? 'Ocultar formação' : `Ver formação completa (${pessoa.cursos.length} cursos)`}
+            <Icone
+              nome="chevron"
+              className={`h-4 w-4 transition-transform duration-300 ${aberto ? 'rotate-180' : ''}`}
+            />
+          </button>
+
+          <div
+            className={`grid transition-[grid-template-rows,opacity] duration-500 ${
+              aberto ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+            }`}
+          >
+            <div className="overflow-hidden">
+              <ul className="mt-5 space-y-2.5 border-t border-areia-200 pt-5">
+                {pessoa.cursos.map((c) => (
+                  <li key={c} className="flex items-start gap-2.5 text-[14px] text-tinta-suave">
+                    <span className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-lima-500" />
+                    {c}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  );
+    </Reveal>
+  )
 }

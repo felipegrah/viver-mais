@@ -1,57 +1,109 @@
-import React from 'react'
+import { site, navegacao, servicos } from '../data/site'
+import Icone from './ui/Icones'
 
 export default function Rodape() {
+  const ano = new Date().getFullYear()
+
   return (
-    <div className="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-      <div className="grid gap-16 row-gap-10 mb-8 lg:grid-cols-6">
-        <div className="md:max-w-md lg:col-span-2">
-          <a
-            href="/"
-            aria-label="Voltar para home"
-            title="Espaço Viver Mais Pilates"
-            className="inline-flex items-center"
-          >
-
-            <img
-              className="h-20 w-auto sm:h-28"
-              src="/images/Logo_viver_mais.png"
-            />
-
-          </a>
-          <div className="mt-4 lg:max-w-sm">
-            <p className="text-sm text-gray-800">
-            <span className="font-bold">Endereço: </span>R. Ialene Schutz Horstmann, 233 - Aririu, Palhoça - SC, 88135-221
+    <footer className="bg-brand-950 text-brand-100">
+      <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
+        <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr]">
+          <div>
+            <p className="font-display text-2xl font-semibold leading-tight text-white">
+              Espaço Viver Mais
+              <span className="mt-1 block text-sm font-normal uppercase tracking-[0.35em] text-lima-400">
+                Pilates
+              </span>
             </p>
-            <p className="mt-4 text-sm text-gray-800">
-              <span className="font-bold">Telefone:</span> <a href="tel:98826-8600">(48) 98826-8600</a>
+            <p className="mt-6 max-w-sm text-[15px] leading-relaxed text-brand-200">
+              Estúdio de Pilates em Aririu, Palhoça/SC. Aulas personalizadas conduzidas por
+              fisioterapeutas, para você se mover melhor todos os dias.
+            </p>
+            <div className="mt-7 flex items-center gap-3">
+              <a
+                href={site.redes.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram do Espaço Viver Mais Pilates"
+                className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-lima-500 hover:text-brand-950"
+              >
+                <Icone nome="instagram" className="h-5 w-5" />
+              </a>
+              <a
+                href={site.redes.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook do Espaço Viver Mais Pilates"
+                className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-lima-500 hover:text-brand-950"
+              >
+                <Icone nome="facebook" className="h-5 w-5" />
+              </a>
+            </div>
+          </div>
+
+          <nav aria-label="Rodapé — navegação">
+            <h2 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-lima-400">
+              Navegação
+            </h2>
+            <ul className="mt-5 space-y-3">
+              {navegacao.map((item) => (
+                <li key={item.nome}>
+                  <a
+                    href={item.href}
+                    className="text-[15px] text-brand-200 transition-colors hover:text-white"
+                  >
+                    {item.nome}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          <div>
+            <h2 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-lima-400">
+              Onde nos encontrar
+            </h2>
+            <ul className="mt-5 space-y-4 text-[15px] text-brand-200">
+              <li className="flex gap-3">
+                <Icone nome="mapa" className="mt-0.5 h-[18px] w-[18px] shrink-0 text-brand-400" />
+                <a
+                  href={site.endereco.linkMaps}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-colors hover:text-white"
+                >
+                  {site.endereco.completo}
+                </a>
+              </li>
+              <li className="flex gap-3">
+                <Icone nome="telefone" className="mt-0.5 h-[18px] w-[18px] shrink-0 text-brand-400" />
+                <a href={site.telefoneLink} className="transition-colors hover:text-white">
+                  {site.telefone}
+                </a>
+              </li>
+              <li className="flex gap-3">
+                <Icone nome="relogio" className="mt-0.5 h-[18px] w-[18px] shrink-0 text-brand-400" />
+                <span>{site.horarios.resumo}</span>
+              </li>
+            </ul>
+            <p className="mt-6 text-[11px] font-semibold uppercase tracking-[0.18em] text-lima-400">
+              Modalidades
+            </p>
+            <p className="mt-3 text-[14px] leading-relaxed text-brand-300">
+              {servicos.map((s) => s.nome).join(' · ')}
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-4">
 
+        <div className="mt-14 flex flex-col gap-3 border-t border-white/10 pt-8 text-[13px] text-brand-300 sm:flex-row sm:items-center sm:justify-between">
+          <p>
+            © {ano} {site.nome}. Todos os direitos reservados.
+          </p>
+          <p>
+            Responsável técnica: Amanda de Sousa Grah · CREFITO-10 240620-F
+          </p>
         </div>
       </div>
-      <div className="flex flex-col justify-between pt-5 pb-10 border-t sm:flex-row">
-        <div className="flex items-center mt-4 space-x-3 sm:mt-0">
-          <a
-            href="https://www.instagram.com/espacovivermaispilates"
-            className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
-          >
-            <svg viewBox="0 0 30 30" fill="currentColor" className="h-6">
-              <circle cx="15" cy="15" r="4" />
-              <path d="M19.999,3h-10C6.14,3,3,6.141,3,10.001v10C3,23.86,6.141,27,10.001,27h10C23.86,27,27,23.859,27,19.999v-10   C27,6.14,23.859,3,19.999,3z M15,21c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S18.309,21,15,21z M22,9c-0.552,0-1-0.448-1-1   c0-0.552,0.448-1,1-1s1,0.448,1,1C23,8.552,22.552,9,22,9z" />
-            </svg>
-          </a>
-          <a
-            href="https://www.facebook.com/espacovivermaispilates"
-            className="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400"
-          >
-            <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
-              <path d="M22,0H2C0.895,0,0,0.895,0,2v20c0,1.105,0.895,2,2,2h11v-9h-3v-4h3V8.413c0-3.1,1.893-4.788,4.659-4.788 c1.325,0,2.463,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.795,0.715-1.795,1.763V11h4.44l-1,4h-3.44v9H22c1.105,0,2-0.895,2-2 V2C24,0.895,23.105,0,22,0z" />
-            </svg>
-          </a>
-        </div>
-      </div>
-    </div>
+    </footer>
   )
 }
