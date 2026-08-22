@@ -2,3 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-areia-50 text-tinta;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    @apply bg-lima-200 text-brand-950;
+  }
+
+  /* Barra de rolagem discreta, alinhada à marca */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-areia-100;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-brand-200;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-brand-300;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

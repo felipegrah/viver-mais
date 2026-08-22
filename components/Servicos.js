@@ -1,51 +1,80 @@
-import React from 'react'
+import { servicos, linkWhatsapp } from '../data/site'
+import Icone from './ui/Icones'
+import Reveal from './ui/Reveal'
+import TituloSecao from './ui/TituloSecao'
 
 export default function Servicos() {
+  const destaque = servicos.find((s) => s.destaque)
+  const demais = servicos.filter((s) => !s.destaque)
+
   return (
-    <section className="bg-green-100" id="servicos">
-      <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-        <div className="mx-auto mb-20 lg:max-w-xl sm:text-center">
-          <h4 className="tracking-tight font-extrabold text-green-600 sm:text-5xl md:text-6xl px-3 py-px mb-4 text-xs uppercase">
-            Serviços
-          </h4>
-        </div>
-        <div className="flex flex-col lg:flex-row">
-          <div className="max-w-xl pr-16 mx-auto mb-10">
-            <h5 className="mb-6 text-3xl font-extrabold leading-none uppercas text-gray-900">
-              Pilates
-            </h5>
-            <p className="mb-6 text-gray-900">
-              O Pilates é um método de exercício físico e alongamento que utiliza o peso do próprio corpo na sua execução. É uma técnica de reeducação do movimento que visa trabalhar o corpo todo, trazendo equilíbrio muscular e mental.
-              Ele trabalha vários grupos musculares ao mesmo tempo, através de movimentos suaves e contínuos, com ênfase na concentração, no fortalecimento e na estabilização dos músculos centrais do corpo
-            </p>
+    <section id="servicos" className="scroll-mt-24 bg-areia-50 py-20 lg:py-28">
+      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+        <TituloSecao
+          etiqueta="Serviços"
+          titulo="Uma modalidade para cada fase da sua vida"
+          texto="Do método clássico ao Neopilates aéreo, todas as aulas partem de uma avaliação individual e são adaptadas ao seu ritmo."
+        />
+
+        <Reveal className="relative mt-14 overflow-hidden rounded-[1.75rem] bg-brand-800 p-8 text-white shadow-alta lg:p-12">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -right-20 -top-24 h-80 w-80 rounded-full bg-brand-700/60 blur-2xl"
+          />
+          <div className="relative lg:flex lg:items-end lg:justify-between lg:gap-12">
+            <div className="max-w-3xl">
+              <span className="inline-flex items-center justify-center rounded-2xl bg-lima-400 p-3.5 text-brand-900">
+                <Icone nome={destaque.icone} className="h-6 w-6" />
+              </span>
+              <h3 className="mt-6 font-display text-3xl font-semibold leading-tight sm:text-4xl">
+                {destaque.nome}
+              </h3>
+              <p className="mt-2 text-[15px] font-medium text-lima-300">{destaque.resumo}</p>
+              <p className="mt-4 text-[16px] leading-relaxed text-brand-100">{destaque.texto}</p>
+            </div>
+            <a
+              href={linkWhatsapp(`Olá! Vim pelo site e gostaria de saber mais sobre ${destaque.nome}.`)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group mt-7 inline-flex shrink-0 items-center gap-2.5 rounded-full bg-lima-500 px-6 py-3.5 text-[15px] font-semibold text-brand-950 transition-colors duration-300 hover:bg-lima-400 lg:mt-0"
+            >
+              <Icone nome="whatsapp" className="h-[18px] w-[18px]" />
+              Quero experimentar
+            </a>
           </div>
-          <div className="grid gap-5 row-gap-5 sm:grid-cols-2">
-            <div className="max-w-md">
-              <h6 className="mb-6 text-3xl font-extrabold leading-none uppercas text-gray-900">Neopilates</h6>
-              <p className="text-sm text-gray-700">
-                As diferenças entre Pilates e Neopilates são as variações de movimentos e aparelhos.
-                Neopilates utilizamos tecidos, lyra, slackline etc. que nos tiram a base estável, fazendo com que o grau de dificuldade e desafio aumentem.
-              </p>
-            </div>
-            <div className="max-w-md">
-              <h6 className="mb-6 text-3xl font-extrabold leading-none uppercas text-gray-900">Pilates para gestante</h6>
-              <p className="text-sm text-gray-700">
-                Quando a mulher engravida seu corpo sofre diferentes mudanças. Com a prática do Pilates essas alterações podem ficar mais suaves e saudáveis, pois o método ajuda no fortalecimento de toda a musculatura.
-              </p>
-            </div>
-            <div className="max-w-md">
-              <h6 className="mb-6 text-3xl font-extrabold leading-none uppercas text-gray-900">Pilates kids</h6>
-              <p className="text-sm text-gray-700">
-                Além de ser uma atividade leve e divertida para as crianças ele trabalha a concentração, postura, coordenação motora, entre outros.
-              </p>
-            </div>
-            <div className="max-w-md">
-              <h6 className="mb-6 text-3xl font-extrabold leading-none uppercas text-gray-900">Pilates Solo</h6>
-              <p className="text-sm text-gray-700">
-                O Pilates solo, como o próprio nome já diz é praticado no chão sobre um tatame ou colchonete utilizando o peso do próprio corpo. Esse método pode ter o auxilio de alguns acessórios como bolas, faixas elásticas, halteres, rolos de espuma.
-              </p>
-            </div>
-          </div>
+        </Reveal>
+
+        <div className="mt-6 grid gap-6 md:grid-cols-3">
+          {demais.map((s, i) => (
+            <Reveal
+              key={s.nome}
+              delay={i * 90}
+              className="group relative flex flex-col overflow-hidden rounded-[1.75rem] border border-areia-200 bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:border-brand-200 hover:shadow-alta"
+            >
+              <span className="inline-flex w-fit items-center justify-center rounded-2xl bg-brand-50 p-3.5 text-brand-600 transition-colors duration-300 group-hover:bg-brand-600 group-hover:text-white">
+                <Icone nome={s.icone} className="h-6 w-6" />
+              </span>
+
+              <h3 className="mt-6 font-display text-2xl font-semibold leading-tight text-tinta">
+                {s.nome}
+              </h3>
+              <p className="mt-2 text-[15px] font-medium text-brand-600">{s.resumo}</p>
+              <p className="mt-4 flex-1 text-[15px] leading-relaxed text-tinta-suave">{s.texto}</p>
+
+              <a
+                href={linkWhatsapp(`Olá! Vim pelo site e gostaria de saber mais sobre ${s.nome}.`)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-7 inline-flex items-center gap-2 text-[15px] font-semibold text-brand-700 transition-colors hover:text-brand-900"
+              >
+                Falar sobre esta aula
+                <Icone
+                  nome="seta"
+                  className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+                />
+              </a>
+            </Reveal>
+          ))}
         </div>
       </div>
     </section>
